@@ -1,14 +1,13 @@
-To clone this directory for a new "project" within the JMA repository:
+To clone this directory for a new "project",
 
-  JMA=https://forge.cornell.edu/svn/repos/jma7/
-  svn cp $JMA/sloan-paper-template $JMA/sloan-FANCY-NEW-NAME -m 'Creating a new directory based on the template for the NEW PROJECT'
+  git clone https://github.com/labordynamicsinstitute/paper-template.git
+  mv paper-template paper-meaningful-name  
+  cd paper-meaningful-name
+  git remote remove origin
 
+Now create a new repository on the git of your choice, e.g., Github. You will then run
 
-Most of this (other than maybe the $JMA variable) will work from the Windows shell as well. ALL of it will work from a Mac shell (Terminal).
+  git remote add origin git@github.com:labordynamicsinstitute/paper-meaningful-name.git
+  git push -u origin master
 
-Then check out the new directory any way you usually do this.
-
-  svn co $JMA/sloan-FANCY-NEW-NAME
-
-The key is to use SVN cp, not just a regular Windows copy. The latter loses all relevant metadata and provenance information.
 
