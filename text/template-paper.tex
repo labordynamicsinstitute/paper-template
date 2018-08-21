@@ -1,0 +1,146 @@
+%John M. Abowd and Ian M. Schmutte
+%abowd-schmutte-privacy.tex
+%First: Feb 2013
+%Today: Sep 2014
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,titlepage]{article}
+%TCIDATA{OutputFilter=Latex.dll}
+%------------ External info is stored in these files. Edit at your own risk ---
+
+
+%--------------------
+%-------------------- Page Formatting ------------
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{plain}                     %%
+%%%%%%%% EXACT 1in MARGINS %%%%%%%  %%
+\setlength{\textwidth}{6.5in}     %%  %%
+\setlength{\oddsidemargin}{0in}   %%  %%
+\setlength{\evensidemargin}{0in}  %%  %%
+\setlength{\textheight}{8.75in}   %%  %%
+\setlength{\topmargin}{0in}       %%  %%
+\setlength{\headheight}{0in}      %%  %%
+\setlength{\headsep}{0in}         %%  %%
+\setlength{\footskip}{.5in}       %%  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------- Document information
+%Insert document information here:
+\newcommand{\mytitle}{Template paper}
+\newcommand{\myshorttitle}{Template}
+\newcommand{\myversion}{October 2015}  %\vspace*{3em} PRELIMINARY DRAFT -- PLEASE DO NOT CITE}%
+\newcommand{\mythanks}{
+Abowd and Vilhuber acknowledge direct support from the U.S. Census Bureau and from NSF Grants BCS-0941226, TC-1012593 and SES-1131848. Some of the research for this paper was conducted using the resources of the \href{http://www2.vrdc.cornell.edu/news/social-science-gateway/}{Social Science Gateway}, which was partially supported by NSF grant SES-0922005. This paper was written while the first author was Distinguished Senior Research Fellow at the Census Bureau. Any opinions and conclusions expressed herein are those of the authors and do not necessarily represent the views of the Census Bureau or the NSF. We acknowledge helpful comments from Cynthia Dwork, Ashwin Machanavajjhala, Bruce Spencer and Nellie Zhao. We thank Jennifer Childs and Casey Eggleston for providing data from the Federal Statistical System Public Opinion Survey conducted by the Census Bureau's Center for Survey Methodology. No confidential data were used in this paper. A complete archive of the data and programs used in this paper is available in the Digital Commons space of the Cornell Labor Dynamics Institute \url{http://digitalcommons.ilr.cornell.edu/ldi/NN/}.
+}
+
+\date{\myversion
+%\\ \vspace*{3em}{THIS VERSION PRELIMINARY AND INCOMPLETE: PLEASE DO NOT CITE}
+}
+%--------------------
+\input{formats}
+\usepackage[named]{algo}
+% suggest \usepackage{algorithm,algorithmic}
+%--------------------
+%try to eliminate the stupid * for \thanks in titlepage
+\renewcommand\footnotemark{}
+%--------------------
+%----------------------
+%To insert un-numbered footnotes (as on the title page)
+%ref: http://en.wikibooks.org/wiki/LaTeX/Formatting#cite_note-csli_footnotes-0
+\makeatletter
+\def\blfootnote{\xdef\@thefnmark{}\@footnotetext}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+	% \maketitle
+	% \begin{abstract}
+	% 	\input{EndMob-abstract}
+	% \end{abstract}
+	% \thispagestyle{empty}
+
+	\begin{titlepage}
+		\begin{center}
+			\Large\MakeUppercase{\mytitle} \\ [.5cm]
+			\large
+			\begin{tabular}{cc}
+			John M.~Abowd &  Ian M.~Schmutte \\
+			Department of Economics & Department of Economics \\
+			Labor Dynamics Institute & Terry College of Business \\
+			Cornell University & University of Georgia \\
+			john.abowd@cornell.edu	& schmutte@uga.edu
+
+			\end{tabular} \\ [2cm]
+			\textbf{\today\blfootnote{\mythanks}} \\ [2cm]
+			% PRELIMINARY DRAFT -- PLEASE DO NOT CITE \\ [2cm]
+		\end{center}
+\end{titlepage}
+
+
+	%Disclaimer Page
+
+	%\lehddisclaimer
+	\thispagestyle{empty}
+	\singlespacing
+		\begin{center}
+			\textbf{Abstract} \\ [.5cm]
+		\end{center}
+		\input{abstract}
+	% ------------------------------ Main Document Body---------------
+	%\onehalfspacing
+	% \newpage
+	% \thispagestyle{empty}
+	% \input{\thisdoc-Notes}
+	% \addtocounter{section}{-1} %only when including the notes page
+	
+	 \newpage
+	 \setcounter{page}{1}
+	\doublespacing
+\section{Introduction}
+\label{sec:intro}
+\input{introduction}
+%\cite{Machanavajjhala:OTM:ICDE:2008}.
+
+\section{Background}
+\label{sec:background}
+\input{background}
+
+\section{Preliminaries}
+\label{sec:preliminaries}
+\input{preliminaries}
+
+
+\section{Applications}
+\label{sec:results}
+\input{results}
+
+%\section{Discussion}
+%\label{sec:discussion}
+%\input{discussion}
+
+\section{Conclusion}
+\label{sec:conclusion}
+\input{conclusion}
+
+
+
+	\singlespacing
+	% ------------------------------ Bibliography---------------------
+	 \nocite{*}
+	% \nocite{cipsea}
+	\bibliographystyle{\mybibstyle}
+	\bibliography{bib/abowd-schmutte-privacy}
+
+% Appendix
+\clearpage
+\appendix
+\section*{APPENDIX}
+\setcounter{section}{1}
+\label{sec:appendix}
+\input{appendix}
+
+
+\end{document}
+

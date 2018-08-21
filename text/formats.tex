@@ -1,0 +1,235 @@
+%TCIDATA{LaTeXparent=0,0,end_mob_paper.tex}
+
+
+
+
+%-------------------- Packages --------------------
+\usepackage[printonlyused]{acronym}   % defines acronyms
+\usepackage{natbib}    % for bibliography
+
+%\newcommand{\mybibstyle}{elsart-harv}
+%\usepackage{harvard}     % format of bibliography
+\newcommand{\mybibstyle}{dcu} % a harvard style
+%\newcommand{\mybibstyle}{plain}
+                       %define bibliography to use
+%\usepackage{sas}       %required for SAS-produced tables
+\usepackage{amssymb}  % AMS symbols
+\usepackage{amsmath}  % AMS math
+\usepackage{amsfonts}
+\usepackage{appendix} % allows flexible appendix environments
+%\usepackage{pstricks}  % adds color to Postscript
+\usepackage{graphicx} % for inclusion of EPS graphics
+\usepackage{multicol} % Multicolumn formatting (in-line tables)
+\usepackage{fullpage}  % enlarged margins
+\usepackage{rotating}  % allows for rotated tables
+\usepackage{epsfig}    % legacy package for inclusion of EPS
+\usepackage{varioref}  % allows for references like ``Table x on page y''
+\usepackage{float}     % ?
+\usepackage{array}     % Modifications of tabular environment
+%\usepackage{doublespace} % if double lines wanted
+\usepackage{setspace}
+\usepackage{threeparttable} %Allows tables with automatic notes section
+\usepackage{longtable} % allows for tables to wrap across pages.
+\usepackage{supertabular} % allows for tables to wrap across pages.
+\usepackage{fancyhdr}  % provides pagestyle fancy (page headers)
+\usepackage[nottoc]{tocbibind} % provides for bibliography, List of tables, etc. to
+                       % be included in the Table of contents.
+\usepackage{color}
+\usepackage{theorem}
+\usepackage{layout}
+\usepackage{makeidx}
+\usepackage{acronym}
+
+	\usepackage{tikz} %graphs
+	\usetikzlibrary{calc}
+	\usetikzlibrary{backgrounds} 
+	\usetikzlibrary{plotmarks}
+	
+
+	\usepackage{xcolor} %font colors
+	\usepackage{multirow} %also for multi-columns
+	\usepackage{geometry} %manually laying out pages
+	\usepackage{threeparttable} %handy table set up
+	\usepackage{fullpage} %manually laying out pages
+	\usepackage{arydshln} %special lines in tables
+
+	
+
+%\usepackage{endnotes}
+%\let\footnote=\endnote
+%\usepackage{index}     % allows for multiple indexes
+\makeindex
+
+% defining colors for package hyperref
+\definecolor{myblue}{rgb}{0,.2,1}
+
+%\usepackage{html}
+\usepackage{hyperref}
+
+\hypersetup{%
+%backref=true,%
+naturalnames=true,%
+bookmarksnumbered=true,%
+bookmarksopen=false,%
+plainpages=true,%
+colorlinks=true,%
+urlcolor=myblue,
+linkcolor=myblue,%
+filecolor=myblue,%
+citecolor=black,%
+%pagecolor=myblue,%
+%pdftitle={\mytitle},%
+pdfpagemode=UseOutlines%
+%pdfauthor={\myauthors},%
+%pdfsubject={\myshorttitle}
+}%
+%pdfstartview=FitW%
+%dvips%
+%pdftex
+%latex2html%
+
+%-------------------- choose the font here --------------------
+%\usepackage{times}
+%\usepackage{newcent}
+%\usepackage{helvet}
+%\usepackage{helvetic}
+%\usepackage{ncntrsbk}
+%\usepackage{bookman}
+%\usepackage{avantgar}
+\usepackage{palatino}
+
+%-------------------- Common Math Operators ----------
+\DeclareMathOperator{\Corr}{Corr}
+\DeclareMathOperator{\cov}{cov}
+\DeclareMathOperator{\var}{var}
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\F}{F}
+\DeclareMathOperator{\f}{f}
+\DeclareMathOperator{\J}{J}
+\DeclareMathOperator{\PrP}{Pr}
+
+%-------------------- Special Commands
+\newcommand{\s}{^{*}} %for putting stars in tables
+\renewcommand{\ss}{^{**}}
+\newcommand{\sss}{^{***}}
+	\newcommand\T{\rule{0pt}{2.6ex}} %more space in tables
+	\newcommand\B{\rule[-1.2ex]{0pt}{0pt}} %more space in tables
+	\newcommand\C{\rule{0pt}{0pt}}
+	
+
+
+
+
+%-------------------- formatting of headers --------------------
+% \newrgbcolor{myblue}{0 .5 1}
+% \newrgbcolor{myred}{1 .1 0}
+
+%\pagestyle{fancy}
+%\fancyhead[LO,RE]{{\small \it \myred U.S. Bureau of the Census preliminary document and data:\\ not for attribution, publication, or redistribution}}
+%\fancyhead[RO,LE]{{\small \it LEHD\\ \myshorttitle}}
+%\fancyfoot[RO,LE]{\small \it - \thepage -}
+%\fancyfoot[CO,CE]{\ \ }
+%\fancyfoot[LO,RE]{\small \it \myversion}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\newcommand{\figurewidth}{\textwidth pt}
+
+%-------------------- formatting of table of contents --------------------
+\setcounter{tocdepth}{3}
+\setcounter{secnumdepth}{3}
+
+%-------------------- formatting of abbreviation index --------------------
+\newcommand{\aindex}[1]{#1\index{#1}} % prints the name at the same time
+\newcommand{\mainref}[1]{\textbf{\textit{\hyperpage{#1}}}}
+\newcommand{\mindex}[1]{\index{#1|mainref}} % defines a main definition
+\newcommand{\Mindex}[1]{#1\mindex{#1}}      % defines a visible main
+\setlength{\columnsep}{60pt} % this generally resets the space between
+                             % columns, but here in particular for the Index
+% this next command redefines paragraph to put all paragraph entries into
+% the index
+%\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+%                                    {3.25ex \@plus1ex \@minus.2ex}%
+%                                    {-1em}%
+%                                    {\normalfont\normalsize\bfseries}}
+% after having run the document, run
+%        makeindex -s QWI_methods.ist QWI_methods.idx
+
+
+%-------------------- formatting of page layout --------------------
+%\setlength{\baselineskip}{.8\baselineskip}
+\setlength{\parskip}{0\baselineskip}
+%\hyphenation{un-em-ploy-ment em-ploy-ment}
+
+%-------------------- formatting of fancy references --------------------
+%\newcommand{\Cite}{\citeasnoun} % this for harvard
+\newcommand{\Cite}{\citet} % this for natbib
+\bibpunct{(}{)}{;}{a}{}{;} %set if using natbib
+
+%\newcommand{\Vref}{\vref} % this refernces with page
+%\newcommand{\Vref}{\ref} % this refernces without page
+\newcommand{\tablefontsize}{\small}
+\newcommand{\dotline}[1]{\multicolumn{#1}{c}{\dotfill}\\}
+\newcommand{\Hline}{\dotline}
+\newcolumntype{M}{>{$}c<{$}}
+\newcolumntype{R}{>{$}r<{$}}
+
+\newcommand{\updating}{
+\begin{center}
+ \fbox{\rule[-5mm]{0cm}{10mm}
+\  Details being updated and currently not available.\ }
+\end{center}
+}
+
+\theoremstyle{plain}
+\theorembodyfont{\normalfont}
+\theoremheaderfont{\itshape}
+\newtheorem{identity}{Identity}
+\newenvironment{steps}{\renewcommand{\theenumi}{Step \arabic{enumi}}%
+  \begin{enumerate}}{\end{enumerate}\renewcommand{\theenumi}{\arabic{enumi}.}}
+\newenvironment{notes}{\renewcommand{\theenumi}{Note \arabic{enumi}}%
+  \begin{enumerate}}{\end{enumerate}\renewcommand{\theenumi}{\arabic{enumi}.}}
+
+%-------------------- Common Theorem Environments -----------------------
+\newtheorem{theorem}{Theorem}
+\newtheorem{acknowledgement}[theorem]{Acknowledgement}
+% \newtheorem{algorithm}[theorem]{Algorithm}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{case}[theorem]{Case}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{conclusion}[theorem]{Conclusion}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{criterion}[theorem]{Criterion}
+% \newtheorem{definition}[theorem]{Definition}
+\newtheorem{definition}{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{solution}[theorem]{Solution}
+\newtheorem{summary}[theorem]{Summary}
+\newenvironment{proof}[1][Proof]{\textbf{#1.} }{\ \rule{0.5em}{0.5em}}
+
+%-------------------- macros from TCILATEX.TEX --------------------------
+% macros for user - defined functions
+\def\limfunc#1{\mathop{\rm #1}}%
+\def\func#1{\mathop{\rm #1}\nolimits}%
+% macro for unit names
+\def\unit#1{\mathop{\rm #1}\nolimits}%
+\input{tcilatex}
+
+% compatibility with other papers
+\newcommand{\Tablefontsize}{\footnotesize}
+\newcommand{\mc}[1]{\multicolumn{1}{c}{#1}}
+\newcommand{\maxtablewidth}{5in}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "end_mob_paper"
+%%% End:
