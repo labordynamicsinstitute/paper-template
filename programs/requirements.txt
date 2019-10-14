@@ -1,0 +1,12 @@
+pyyaml
+numpy
+matplotlib
+gitpython
+termcolor
+colorama
+jupyter
+future
+
+nltk
+pandas
+sklearn
