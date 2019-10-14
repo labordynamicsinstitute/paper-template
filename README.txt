@@ -9,5 +9,8 @@ Now create a new repository on the git of your choice, e.g., Github. You will th
 
   git remote add origin git@github.com:labordynamicsinstitute/paper-meaningful-name.git
   git push -u origin master
+  
+Alternatively, you can use the [Use as template](https://github.com/labordynamicsinstitute/paper-template/generate) functionality on Github.com.
+
 
 
