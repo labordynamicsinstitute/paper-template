@@ -1,8 +1,5 @@
 clear all
-set more off, perm
-
-sysdir set PLUS "../lib/ado"
-
+include "config.do"
 program main
 	* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 	* Add required packages from SSC to this list
