@@ -21,6 +21,16 @@ log using "`logprefix'_`cdate'-`ctime'.log", replace text
 global precision 0.01
 
 /* paths */
+* Variations on basepath
+global reponame "paper-template"
+
+if ( "`c(username)'" == "Fabian" ) {
+        global basepath = "C:/Users/Fabian/Dropbox/path/tofiles"
+}
+if ( "`c(username)'" == "vilhuber" | "`c(username)'" == "lv39" ) {
+        global basepath = "/home/vilhuber/Workspace/$reponame/"
+}
+
 global basepath "/path/to/project"      // change this for your specific system
 global inputdata "$basepath/inputdata"  // this is where you would read data acquired elsewhere
 global outputdata "$basepath/outputdata" // this is where you would write the data you create in this project
@@ -29,11 +39,13 @@ global programs "$basepath/programs"    // All programs (which you might "includ
 global adobase  "$basepath/programs/ado" // Ado packages used by the project are to be found here
 
 /* install any packages locally */
+
 capture mkdir "$adobase"
 sysdir set PERSONAL "$adobase/personal"
 sysdir set PLUS     "$adobase/plus"
 sysdir set SITE     "$adobase/site"
-
+sysdir
+adopath
 
 
 /* keep this line in the config file */
