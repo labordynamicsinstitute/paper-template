@@ -11,8 +11,11 @@
 /* Create a log file */
 local c_date = c(current_date)
 local cdate = subinstr("`c_date'", " ", "_", .)
+local c_time = c(current_time)
+local ctime = subinstr("`c_time'", ":", "_", .)
+
 local logprefix "logfile" // could be "myprog" or something else or could come from the main program 
-log using "`logprefix'_`cdate'.log", replace text
+log using "`logprefix'_`cdate'-`ctime'.log", replace text
 
 /* define global parameters and paths */
 global precision 0.01
@@ -27,9 +30,9 @@ global adobase  "$basepath/programs/ado" // Ado packages used by the project are
 
 /* install any packages locally */
 capture mkdir "$adobase"
-sysdir set PERSONAL "$adobase/ado/personal"
-sysdir set PLUS     "$adobase/ado/plus"
-sysdir set SITE     "$adobase/ado/site"
+sysdir set PERSONAL "$adobase/personal"
+sysdir set PLUS     "$adobase/plus"
+sysdir set SITE     "$adobase/site"
 
 
 
