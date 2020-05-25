@@ -5,7 +5,6 @@
 # Change the basepath depending on your system
 
 basepath <- rprojroot::find_root(rprojroot::has_file("pathconfig.R"))
-setwd(basepath)
 
 # Main directories
 acquired <- file.path(basepath, "data","acquired")
