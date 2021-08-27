@@ -3,9 +3,13 @@
 
 using Pkg
 
-# generate and activate the package for the submitted report
-Pkg.generate("path/to/reportpackage")
-Pkg.activate("path/to/reportpackage")
+# generate and activate the package for the current directory
+Pkg.generate(".")
+Pkg.activate(".")
+
+# if this were to be applied for a different directory, use these lines
+# Pkg.generate("path/to/reportpackage")
+# Pkg.activate("path/to/reportpackage")
 
 # set of packages you want to install
 dependencies = [
@@ -21,11 +25,12 @@ Pkg.add(dependencies)
 
 ###############################
 ### re-use of packages
+# The following lines are for folks re-using this package/ replicating the project
 
 using Pkg
 
 # activate the report's quasi-package
-Pkg.activate("path/to/reportpackage")
+Pkg.activate(".")
 # instantiate: this will install any new dependencies in Manifest.toml and Project.toml
 Pkg.instantiate()
 
