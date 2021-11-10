@@ -5,6 +5,8 @@
 mran.date <- "2019-09-01"
 options(repos=paste0("https://cran.microsoft.com/snapshot/",mran.date,"/"))
 
+# Note: Using this with a specific version number may fail, since not all dependencies might be met.
+# Debug interactively, then identify all installed packages that needed to be pinned.
 
 pkgTest <- function(x,y="")
 {
