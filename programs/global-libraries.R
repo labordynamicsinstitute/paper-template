@@ -6,12 +6,17 @@ mran.date <- "2019-09-01"
 options(repos=paste0("https://cran.microsoft.com/snapshot/",mran.date,"/"))
 
 
-
-pkgTest <- function(x)
+install.packages("remotes")
+pkgTest <- function(x,y="")
 {
 	if (!require(x,character.only = TRUE))
 	{
-		install.packages(x,dep=TRUE)
+		if ( y == "" ) 
+			{
+		        install.packages(x,dep=TRUE)
+			} else {
+			remotes::install_version(x, y)
+			}
 		if(!require(x,character.only = TRUE)) stop("Package not found")
 	}
 	return("OK")
