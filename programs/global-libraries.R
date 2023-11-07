@@ -2,8 +2,8 @@
 # global libraries used everywhere #
 ####################################
 
-mran.date <- "2019-09-01"
-options(repos=paste0("https://cran.microsoft.com/snapshot/",mran.date,"/"))
+ppm.date <- "2023-11-01"
+options(repos=paste0("https://packagemanager.posit.co/cran/",ppm.date,"/"))
 
 # Note: Using this with a specific version number may fail, since not all dependencies might be met.
 # Debug interactively, then identify all installed packages that needed to be pinned.
