@@ -4,7 +4,6 @@
 using Pkg
 
 # generate and activate the package for the current directory
-Pkg.generate(".")
 Pkg.activate(".")
 
 # if this were to be applied for a different directory, use these lines
