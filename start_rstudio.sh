@@ -12,7 +12,7 @@ fi
 
 PWD=$(pwd)
 . ${PWD}/.myconfig.sh
-tag=${1:-2023-11-08}
+tag=${1:-latest}
 case $USER in
   codespace)
   WORKSPACE=/workspaces

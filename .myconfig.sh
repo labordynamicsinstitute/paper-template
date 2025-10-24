@@ -1,5 +1,5 @@
-repo=report-aea-data-editor-2023
-space=aeadataeditor
+repo=verse
+space=rocker
 dockerrepo=$(echo $space/$repo | tr [A-Z] [a-z])
 case $USER in
   codespace)
